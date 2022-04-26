@@ -1,14 +1,55 @@
-﻿    Console.WriteLine("Entre com o seu nome");
-    string nome = Console.ReadLine();
+﻿Individuo i1 = new Individuo();
 
-    Console.WriteLine("Entre com sua altura em metros. Ex:1,70");
-    float altura = Convert.ToSingle(Console.ReadLine());
+Console.WriteLine("Calculadora IMC");
 
-            
-    Console.WriteLine("Entre com seu peso em Kg. Ex: 102,5");
-    float peso = Convert.ToSingle(Console.ReadLine());
+Console.WriteLine("Informe seu nome:");
+i1.Nome = Console.ReadLine();
 
-    double imc = peso / (altura * altura);
+Console.WriteLine("Informe sua altura:");
+i1.Altura = Convert.ToSingle(Console.ReadLine());
 
-    Console.WriteLine("{0} sua altura é {1} e seu peso {2}", nome, altura, peso);
-    Console.WriteLine("Seu IMC é {0}", imc);
+Console.WriteLine("Informe seu peso:");
+i1.Peso = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("\nNome: {0}", i1.Nome);
+Console.WriteLine("Altura: {0}", i1.Altura);
+Console.WriteLine("Peso: {0}", i1.Peso);
+
+Console.WriteLine("\nClassificação do IMC: {0}", i1.Classificacao);
+
+if(i1.IMC < 18.5)
+{
+    Console.WriteLine("\nPara chegar ao peso ideal, você deve ganhar {0} kg", i1.GanharPeso());
+}
+
+if(i1.IMC > 24.9)
+{
+    Console.WriteLine("\nPara chegar ao peso ideal, você deve perder {0} kg", i1.PerderPeso());
+}
+
+Console.WriteLine("Calculadora IMC");
+
+Console.WriteLine("Informe seu nome:");
+i1.Nome = Console.ReadLine();
+
+Console.WriteLine("Informe sua altura:");
+i1.Altura = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("Informe seu peso:");
+i1.Peso = Convert.ToSingle(Console.ReadLine());
+
+Console.WriteLine("\nNome: {0}", i1.Nome);
+Console.WriteLine("Altura: {0}", i1.Altura);
+Console.WriteLine("Peso: {0}", i1.Peso);
+
+Console.WriteLine("\nClassificação do IMC: {0}", i1.Classificacao);
+
+if(i1.IMC < 18.5)
+{
+    Console.WriteLine("\nPara chegar ao peso ideal, você deve ganhar {0} kg", i1.GanharPeso());
+}
+
+if(i1.IMC > 24.9)
+{
+    Console.WriteLine("\nPara chegar ao peso ideal, você deve perder {0} kg", i1.PerderPeso());
+}

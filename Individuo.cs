@@ -19,7 +19,6 @@ public class Individuo
         Peso = 0;
     }
 
-
     public string Classificacao
     {
         get
